@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --akcent: #0284C7;
+  --pozadina: #F8FAFC;
+  --tekst: #1E293B;
+  --kontejner: #FFFFFF;
+  --tekst2: #64748B;
+  --border: #E2E8F0;
+  --akcent-light: #E0F2FE;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--tekst);
+}
+
+body {
+  padding: 1em;
+  background-color: var(--pozadina);  
+}
+
+h1, h2, h3 {
+  font-family: Montserrat, Roboto;  
+}
+
+nav {
+    margin: 1em auto 3em auto;
+    width: min(1000px, 100%);
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  gap: 2em;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--tekst);
+  font-weight: 600;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  transition: all 0.2 ease;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: var(--akcent);
+  background: var(--akcent-light);
+}
+
+header, section {
+  margin: 2em auto;
+  width: min(75em, 100%);
+  background-color: var(--kontejner);
+  padding: min(2em, 15%);
+  border-radius: 1em;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04),
+              0 20px 60px -10px rgba(2, 132, 199, 0.08);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+
+header img {
+  max-width: 100%;
+  border-radius: 1em;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 1em;
+  box-shadow: 0 8px 30px rgba(2, 132, 199, 0.15);
+}
+
+.text-container {
+  flex: 0 1 34em;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 0.8rem;
+  letter-spacing: 0.15rem;
+  color: var(--tekst2);
+  margin-bottom: 0.5em;
+}
+
+.text-container p {
+  margin: 1.25em 0 1.5em 0;
+  font-size: 1.25rem;
+}
+
+.cta-button {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background-color: var(--akcent);
+  padding: 0.75em 1.25em;
+  border-radius: 0.5em;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.4);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2em 0;
+}
+
+.stats {
+  display: flex;
+  gap: 2em;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+
+.stat-value {
+  font-family: 'Cormorant Garmond', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tekst2);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin-top: 2em;
+  max-width: 500px;
+}
+
+input, textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  padding: 0.75em 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: var(--tekst);
+  background: transparent;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  border-bottom-color: var(--akcent);
+}
+
+button[type="submit"] {
+  align-self: flex-start;
+  padding: 1em 2em;
+  border: 2px solid var(--tekst);
+  background: transparent;
+  color: var(--tekst);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background: var(--tekst);
+  color: white;
+}
+
+.kontakt-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  margin-top: 2em;
+  max-width: 500px;
+}
+
+.kontakt-info p {
+  color: var(--tekst2);
+  font-size: 0.95rem;
+}
